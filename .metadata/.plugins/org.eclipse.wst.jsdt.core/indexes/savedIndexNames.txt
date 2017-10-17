@@ -1,0 +1,2 @@
+INDEX VERSION 1.4+/Users/jimmy/SD/Quiz/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+2087100934.index

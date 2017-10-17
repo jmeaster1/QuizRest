@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.QuizTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-10-17T20:23:52" hostname="Jimmys-MacBook-Pro.local" time="1.895">
+  <properties/>
+  <testcase name="smokeTest" classname="test.QuizTest" time="1.686"/>
+  <testcase name="testQuizFieldMappings" classname="test.QuizTest" time="0.209"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[log4j:WARN No appenders could be found for logger (org.jboss.logging).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+]]></system-err>
+</testsuite>
