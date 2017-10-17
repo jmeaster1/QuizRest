@@ -32,24 +32,32 @@ public class QuizController {
 		return dao.index();
 	}
 	
-	@RequestMapping(path = "quizzes", method = RequestMethod.GET)
+	@RequestMapping(path = "quizzes/{id}", method = RequestMethod.GET)
 	public Quiz show(@PathVariable int id) {
-		
-		//STUB
 		return dao.show(id);
 	}
 	
-	@RequestMapping(path = "quizzes", method = RequestMethod.GET)
-	public Quiz create(@PathVariable Quiz quiz) {
-		
-		///STUB
-		return dao.create(quiz);
+	@RequestMapping(path = "quizzes", method = RequestMethod.POST)
+	public Quiz create(@RequestBody String jsonAddress) {
+		ObjectMapper mapper = new ObjectMapper();
+		Quiz quiz = null;
+		try {
+			  quiz = mapper.readValue(jsonAddress, Quiz.class);
+			} catch (Exception e) {
+			  e.printStackTrace();
+			}
+			return dao.create(quiz);
+	}
+	@RequestMapping(path = "quizzes", method = RequestMethod.PUT)
+	public Quiz update(@RequestBody String jsonAddress, @PathVariable int id) {
+		ObjectMapper mapper = new ObjectMapper();
+		Quiz quiz = null;
+		try {
+			  quiz = mapper.readValue(jsonAddress, Quiz.class);
+			} catch (Exception e) {
+			  e.printStackTrace();
+			}
+			return dao.update(id, quiz);
 	}
 	
-	@RequestMapping(path = "quizzes", method = RequestMethod.GET)
-	public Quiz update(@PathVariable int id) {
-		
-		//STUB
-		return dao.show(id);
-	}
 }

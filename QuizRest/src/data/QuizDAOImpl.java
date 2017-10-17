@@ -29,13 +29,22 @@ public class QuizDAOImpl implements QuizDAO {
 
 	@Override
 	public Quiz create(Quiz quiz) {
-		// TODO Auto-generated method stub
-		return null;
+			  em.persist(quiz);
+			  em.flush();
+			  return em.find(Quiz.class, quiz.getId());
 	}
 
 	@Override
 	public Quiz update(int id, Quiz quiz) {
-		// TODO Auto-generated method stub
-		return null;
+		Quiz managed = em.find(Quiz.class, id);
+		managed.setName(quiz.getName());
+		return managed;
+	}
+
+	@Override
+	public boolean destroy(int id) {
+		Quiz managed = em.find(Quiz.class, id);
+		em.remove(managed);
+		return true;
 	}
 }

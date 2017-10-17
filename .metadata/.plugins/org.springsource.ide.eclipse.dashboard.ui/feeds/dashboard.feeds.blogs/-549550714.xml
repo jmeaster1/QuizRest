@@ -5,7 +5,98 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2017-10-17T12:25:22Z</updated>
+  <updated>2017-10-17T21:23:49Z</updated>
+  <entry>
+    <title>Spring Web Services 2.4.1.RELEASE / 3.0.0.RC1 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/10/17/spring-web-services-2-4-1-release-3-0-0-rc1-released" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Greg Turnquist</name>
+    </author>
+    <id>tag:spring.io,2017-10-16:3066</id>
+    <updated>2017-10-17T21:23:49Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;Greetings Spring community,&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-ws/"&gt;Spring Web Services&lt;/a&gt; now official has two branches: &lt;strong&gt;master&lt;/strong&gt; (3.0+) and &lt;strong&gt;2.x&lt;/strong&gt; (maintenance of the old 2.x series). The 2.x series will be maintained as long as Spring Framework 4.x is supported, yet any new work will be conducted on the master branch.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;2.4.1.RELEASE is a minor patch release while 3.0.1.RC1 is a major upgrade. The links below include related tickets.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="https://jira.spring.io/secure/ReleaseNote.jspa?projectId=10060&amp;amp;version=15717"&gt;2.4.1 Release Notes&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-ws/docs/2.4.1.RELEASE/reference/"&gt;2.4.1 Documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10060&amp;amp;version=15247"&gt;3.0.0.RC1 Release Notes&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-ws/docs/3.0.0.RC1/reference/"&gt;3.0.0.RC1 Documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;3.0.0.RC1:&lt;/p&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Rebases Spring Web Services to run on Spring Framework 5.0 and Java 8&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Drops support for the older Apache WSS4J 1.x line covered by the &lt;strong&gt;org.springframework.ws.soap.security.wss4j&lt;/strong&gt; package. Instead, we only support WSS4J 2.x (in the &lt;strong&gt;org.springframework.ws.soap.security.wss4j2&lt;/strong&gt; package).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Upgrades our XMPP library Smack support to 4.2.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;This version is planned to be picked up by Spring Boot 2.0 as well as Spring IO Platform Cairo.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2.4.1.RELEASE:&lt;/p&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Maintains our existing baseline of dependencies, making movements on latest supported versions of Spring Framework and Spring Security&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;We&amp;#8217;ll maintain the 2.x version as long as Spring Framework 4.x is supported.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Based on several of the gaps between Spring Framework 4.x and 5.x, there will be no more compatibility checks of our 2.x branch against Spring Framework 5.x If you need Spring Framework 5, you really need to upgrade to our 3.x branch.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;We&amp;#8217;ve also adopted &lt;a href="https://circleci.com/gh/spring-projects/spring-ws"&gt;CircleCI&lt;/a&gt; as our continuous integration solution, ensuring we can run precise versions of Java against these different versions of Spring WS. As stated in a &lt;a href="https://spring.io/blog/2016/08/29/spring-web-services-2-3-1-2-4-0-are-released"&gt;previous blog post&lt;/a&gt;, you can sleep at night know the code has been tested against your favorite version of Spring. Easy migration paths are a must for the Spring community.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The reference documentation has been migrated to Asciidoctor, meaning it&amp;#8217;s easier than ever to make contributions on that front (for both versions). Also, the build process was moved to Maven. This may seem awkward, but the need for several profiles is critical, and with Maven, they are a first class citizen.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="admonitionblock note"&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td class="icon"&gt;
+&lt;div class="title"&gt;Note&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="content"&gt;
+Spring IO Platform testing is a critical component, so we are still working on migrating that phase of our acceptance testing.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-ws/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-ws"&gt;GitHub&lt;/a&gt; | &lt;a href="https://jira.spring.io/browse/SWS"&gt;Issues&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The artifacts are staged on maven central and &lt;a href="http://repo.spring.io/" class="bare"&gt;http://repo.spring.io/&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Cheers!&lt;/p&gt;
+&lt;/div&gt;</content>
+  </entry>
   <entry>
     <title>Spring Boot 1.5.8 available now</title>
     <link rel="alternate" href="https://spring.io/blog/2017/10/17/spring-boot-1-5-8-available-now" />
@@ -783,23 +874,5 @@ This version utilize the &lt;code&gt;spring-kafka-1.3.0.RELEASE&lt;/code&gt; fou
   &lt;li&gt;Spring Data Elasticsearch 3.0 GA - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-elasticsearch/3.0.0.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/elasticsearch/docs/3.0.0.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/elasticsearch/docs/3.0.0.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/elasticsearch/docs/3.0.0.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Spring Data Couchbase 3.0 GA - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-couchbase/3.0.0.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/3.0.0.RELEASE/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/3.0.0.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/3.0.0.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <title>Pivotal and Spring Team at JavaOne 2017</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/09/28/pivotal-and-spring-team-at-javaone-2017" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2017-09-28:3047</id>
-    <updated>2017-09-28T15:09:00Z</updated>
-    <content type="html">&lt;p&gt;It&amp;rsquo;s that time of year again! It&amp;rsquo;s an exciting time for Java developers with Java 9 freshly out the door, with the promise of a faster release cadence for the language itself in the air.&lt;br/&gt;If you&amp;rsquo;re coming to the event, come check out talks with Pivotal / Spring Team speakers, and visit us at the booth for hands on lab stations for Reactive Spring, Microservices and Cloud Foundry!&lt;/p&gt;
-&lt;p&gt;Cloud-Native Application Development with Cloud Foundry on Oracle Cloud&lt;br/&gt;Devin Carlen, Oracle&lt;br/&gt;Dormain Drewitz, Director Product Marketing, Pivotal Software&lt;br/&gt;Prasad Bopardikar, Advisory Partner Solution Architect, Pivotal&lt;br/&gt;Tuesday, Oct 03, 3:00 p.m. - 3:45 p.m. | Moscone West - Room 2003&lt;/p&gt;
-&lt;p&gt;Services, Assemble! Apply MVP Principles to Create Microservices Without Chaos&lt;br/&gt;Mark Heckler, Principal Technologist/Developer Advocate, Pivotal&lt;br/&gt;Thursday, Oct 05, 12:45 p.m. - 1:30 p.m. | Marriott Marquis (Yerba Buena Level) - Salon 14&lt;/p&gt;
-&lt;p&gt;Machine Learning Exposed: Workshop&lt;br/&gt;James Weaver, Developer Advocate, Pivotal&lt;br/&gt;Tuesday, Oct 03, 8:30 a.m. - 10:30 a.m. | Hilton San Francisco Union Square (Lobby Level) - Golden Gate 4/5&lt;/p&gt;
-&lt;p&gt;Going Reactive with Spring 5 and Project Reactor&lt;br/&gt;Mark Heckler, Principal Technologist/Developer Advocate, Pivotal&lt;br/&gt;Josh Long, developer, Pivotal&lt;br/&gt;Tuesday, Oct 03, 8:30 a.m. - 9:15 a.m. | Moscone West - Room 2006&lt;/p&gt;
-&lt;p&gt;Quantum Computing Exposed: The Fundamentals&lt;br/&gt;James Weaver, Developer Advocate, Pivotal&lt;br/&gt;Johan Vos, CTO, Gluon&lt;br/&gt;Monday, Oct 02, 4:30 p.m. - 5:15 p.m. | Moscone West - Room 2010&lt;/p&gt;
-&lt;p&gt;Clouds and Containers: Straight Up, What’s the Difference and Why Should I Care?&lt;br/&gt;Mark Heckler, Principal Technologist/Developer Advocate, Pivotal&lt;br/&gt;Jennifer Reif, Programmer Analyst, Edward Jones&lt;br/&gt;Wednesday, Oct 04, 11:45 a.m. - 12:30 p.m. | Moscone West - Room 2024&lt;/p&gt;
-&lt;p&gt;Microservices BOF&lt;br/&gt;Ilya Dmitrichenko, DX, Weaveworks&lt;br/&gt;Chris Richardson, Software Craftsman, Eventuate, Inc&lt;br/&gt;Josh Long, developer, Pivotal&lt;br/&gt;Monday, Oct 02, 6:30 p.m. - 7:15 p.m. | Moscone West - Room 2002&lt;/p&gt;</content>
   </entry>
 </feed>

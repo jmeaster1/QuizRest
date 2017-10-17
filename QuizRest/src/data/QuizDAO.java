@@ -9,5 +9,6 @@ public interface QuizDAO {
 	public Quiz show(int id);
 	public Quiz create(Quiz quiz);
 	public Quiz update(int id, Quiz quiz);
+	public boolean destroy(int id);
 
 }
