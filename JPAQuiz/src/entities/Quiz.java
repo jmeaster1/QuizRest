@@ -1,9 +1,12 @@
 package entities;
 
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Quiz {
@@ -13,14 +16,14 @@ public class Quiz {
 	private int id;
 
 	private String name;
+	
+	@OneToMany(mappedBy = "question")
+	private Set<Question> questions;
 
 	public int getId() {
 		return id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	public String getName() {
 		return name;
@@ -28,6 +31,15 @@ public class Quiz {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+
+	public Set<Question> getQuestions() {
+		return questions;
+	}
+
+	public void setQuestions(Set<Question> questions) {
+		this.questions = questions;
 	}
 
 	public Quiz(int id, String name) {

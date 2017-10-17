@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Answer {
@@ -15,6 +17,10 @@ public class Answer {
 	private String answerText;
 	
 	private boolean isCorrect;
+	
+	@ManyToOne
+	  @JoinColumn(name="question_id")
+	  private Question question;
 
 	public Answer(int id, String answerText, boolean isCorrect) {
 		super();
@@ -31,9 +37,6 @@ public class Answer {
 		return id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	public String getAnswerText() {
 		return answerText;
@@ -49,6 +52,15 @@ public class Answer {
 
 	public void setCorrect(boolean isCorrect) {
 		this.isCorrect = isCorrect;
+	}
+	
+
+	public Question getQuestion() {
+		return question;
+	}
+
+	public void setQuestion(Question question) {
+		this.question = question;
 	}
 
 	@Override
