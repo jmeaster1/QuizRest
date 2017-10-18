@@ -17,7 +17,7 @@ public class Quiz {
 
 	private String name;
 	
-	@OneToMany(mappedBy = "question")
+	@OneToMany(mappedBy = "quiz")
 	private Set<Question> questions;
 
 	public int getId() {

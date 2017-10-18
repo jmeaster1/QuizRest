@@ -60,4 +60,10 @@ public class QuizController {
 			return dao.update(id, quiz);
 	}
 	
+	@RequestMapping(path = "quizzes/{id}", method = RequestMethod.DELETE)
+	public boolean destroy(@PathVariable int id) {
+		return dao.destroy(id);
+	}
+
+	
 }
