@@ -1,15 +1,19 @@
 package entities;
 
-import java.util.List;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 public class Question {
@@ -20,11 +24,13 @@ public class Question {
 
 	private String questionText;
 	
-	@OneToMany(mappedBy = "question")
+	@JsonManagedReference
+	@OneToMany(mappedBy = "question", fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.REMOVE} )
 	private Set<Answer> answers;
 	
+	@JsonIgnore
 	@ManyToOne
-	  @JoinColumn(name="question_id")
+	  @JoinColumn(name="quiz_id")
 	  private Quiz quiz;
 
 	public Question(int id, String questionText) {
