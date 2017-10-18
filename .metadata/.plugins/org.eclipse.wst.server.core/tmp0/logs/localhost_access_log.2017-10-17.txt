@@ -21,3 +21,13 @@
 0:0:0:0:0:0:0:1 - - [17/Oct/2017:15:43:02 -0600] "GET /QuizRest/rest/quizzes HTTP/1.1" 200 73
 127.0.0.1 - - [17/Oct/2017:18:43:09 -0600] "GET / HTTP/1.1" 404 994
 127.0.0.1 - - [17/Oct/2017:18:45:50 -0600] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [17/Oct/2017:20:55:31 -0600] "GET /QuizRest/rest/quizzes HTTP/1.1" 500 11643
+0:0:0:0:0:0:0:1 - - [17/Oct/2017:20:55:53 -0600] "GET /QuizRest/rest/ping HTTP/1.1" 200 4
+0:0:0:0:0:0:0:1 - - [17/Oct/2017:22:01:02 -0600] "GET /QuizRest/rest/ping HTTP/1.1" 200 4
+0:0:0:0:0:0:0:1 - - [17/Oct/2017:22:01:05 -0600] "GET /QuizRest/rest/ping HTTP/1.1" 200 4
+0:0:0:0:0:0:0:1 - - [17/Oct/2017:22:01:07 -0600] "GET /QuizRest/rest/ping HTTP/1.1" 200 4
+0:0:0:0:0:0:0:1 - - [17/Oct/2017:22:01:08 -0600] "GET /QuizRest/rest/ping HTTP/1.1" 200 4
+0:0:0:0:0:0:0:1 - - [17/Oct/2017:22:01:10 -0600] "GET /QuizRest/rest/ping HTTP/1.1" 200 4
+0:0:0:0:0:0:0:1 - - [17/Oct/2017:22:01:37 -0600] "POST /QuizRest/rest/quizzes HTTP/1.1" 500 5919
+0:0:0:0:0:0:0:1 - - [17/Oct/2017:22:02:10 -0600] "POST /QuizRest/rest/quizzes HTTP/1.1" 500 5919
+0:0:0:0:0:0:0:1 - - [17/Oct/2017:22:02:41 -0600] "GET /QuizRest/rest/quizzes HTTP/1.1" 500 11643

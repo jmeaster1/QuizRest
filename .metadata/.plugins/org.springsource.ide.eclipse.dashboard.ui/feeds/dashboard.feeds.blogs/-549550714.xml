@@ -5,7 +5,20 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2017-10-17T23:44:13Z</updated>
+  <updated>2017-10-18T01:33:00Z</updated>
+  <entry>
+    <title>Spring Tips: Bootiful JAX-RS</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/10/18/spring-tips-bootiful-jax-rs" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2017-09-27:3041</id>
+    <updated>2017-10-18T01:33:00Z</updated>
+    <content type="html">&lt;p&gt;Speaker: &lt;a href="https://www.twitter.com/starbuxman"&gt;Josh Long&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Hi Spring fans! In this tip, we&amp;rsquo;ll look at how to integrate a Spring Boot application with JAX-RS (using the Jersey reference implementation). JAX-RS is a JCP standard for building REST applications. &lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/deB70lfUJBU" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
   <entry>
     <title>This Week in Spring - October 17th, 2017</title>
     <link rel="alternate" href="https://spring.io/blog/2017/10/17/this-week-in-spring-october-17th-2017" />
@@ -14,11 +27,12 @@
       <name>Josh Long</name>
     </author>
     <id>tag:spring.io,2017-10-17:3067</id>
-    <updated>2017-10-17T23:44:13Z</updated>
+    <updated>2017-10-17T23:44:00Z</updated>
     <content type="html">&lt;p&gt;Hi Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week I&amp;rsquo;ve been in Dallas and Austin, Texas, first for customer meetings and then to attend and speak at &lt;a href="https://www.reactivesummit.org/"&gt;the epic Reactive Summit&lt;/a&gt;. If you&amp;rsquo;re around, don&amp;rsquo;t hesitate to &lt;a href="http://twitter.com/starbuxman"&gt;say hi on Twitter!&lt;/a&gt; We&amp;rsquo;ve got a &lt;em&gt;lot&lt;/em&gt; to cover so let&amp;rsquo;s get to it!&lt;/p&gt;
+&lt;p&gt;Also, I&amp;rsquo;ll be doing a webinar with our friends at OCI on November 9th, 2017, on &lt;a href="https://objectcomputing.com/products/grails/webinar-grails-3-spring-developers/"&gt;Grails for the Spring Developer, with my friend and Grails co-founder Jeff Scott Brown&lt;/a&gt;. I hope you&amp;rsquo;ll join us! &lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Last week, SpringSource co-founder and Spring Framework lead &lt;a href="https://spring.io/blog/2017/10/10/spring-co-founder-and-spring-framework-lead-juergen-hoeller-wins-jax-special-jury-award"&gt;Juergen Hoeller won a JAX Special Jury Award for all of his considerable work since the very beginning of the Spring projects&lt;/a&gt;. Thanks to him, the special jury noted, &amp;ldquo;Spring Framework has never needed a complete rewrite in all of the years it has existed. Instead, it has continuously adapted to the changing trends.&amp;rdquo; Thank you, Juergen, for all that you do.&lt;/li&gt;
-  &lt;li&gt;Last week, I looked at how to use &lt;a href="https://spring.io/blog/2017/10/11/spring-tips-bootiful-reactive-scala#disqus_thread"&gt;Scala with a reactive Spring Boot application&lt;/a&gt; and how to interoperate with other Reactive Streams-compliant projects like Akka Streams.&lt;/li&gt;
+  &lt;li&gt;Last week, I looked at how to use &lt;a href="https://spring.io/blog/2017/10/11/spring-tips-bootiful-reactive-scala"&gt;Scala with a reactive Spring Boot and Spring Webflix-based application&lt;/a&gt; and how to interoperate with other Reactive Streams-compliant projects like Akka Streams.&lt;/li&gt;
   &lt;li&gt;Spring Data lead Oliver Gierke just announced &lt;a href="https://spring.io/blog/2017/10/11/spring-data-ingalls-sr8-released"&gt;Spring Data Ingalls SR8&lt;/a&gt;. This release includes a number of improvements and bug fixes and is a recommended upgrade for all those using the Ingalls release train.&lt;/li&gt;
   &lt;li&gt;Spring Boot &lt;a href="https://spring.io/blog/2017/10/12/spring-boot-2-0-0-m5-available-now"&gt;lead Phil Webb just announced Spring Boot 2.0.0.M5&lt;/a&gt;. The new release is &lt;a href="http://start.spring.io"&gt;now available on the Spring Initializr&lt;/a&gt;. It includes preliminary support for Java 9, OAuth 2 client support from Spring Security 5.0, JSON-B support, and a new Spring Session Actuator endpoint.&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2017/10/12/spring-tool-suite-3-9-1-released"&gt;Spring Tool Suite lead Martin Lippert just announced Spring Tool Suite 3.9.1&lt;/a&gt;. The new release updates to Eclipse Oxygen 1.a, includes JDK 9 and JUnit 5, updated the Spring Boot Dashboard to support insight of &lt;em&gt;running&lt;/em&gt; beans in a Spring Boot release. This last thing is &lt;em&gt;so&lt;/em&gt; cool! There&amp;rsquo;s also a refactoring to convert &lt;code&gt;application.properties&lt;/code&gt; to &lt;code&gt;application.yml&lt;/code&gt;, and of course a slew of bug-fixes and improvements.&lt;/li&gt;
@@ -797,76 +811,5 @@ dependencies {&#xD;
     ...&#xD;
 }
 &lt;/code&gt;&lt;/pre&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring For Apache Kafka 2.0 GA Available</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/10/02/spring-for-apache-kafka-2-0-ga-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Artem Bilan</name>
-    </author>
-    <id>tag:spring.io,2017-09-29:3048</id>
-    <updated>2017-10-02T13:37:47Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;We are pleased to announce the general availability of the &lt;a href="https://github.com/spring-projects/spring-kafka/milestone/22?closed=1"&gt;2.0.0.RELEASE&lt;/a&gt; of the Spring for Apache Kafka &lt;code&gt;2.0&lt;/code&gt; version.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;As mentioned in the &lt;a href="https://spring.io/blog/2017/09/12/spring-for-apache-kafka-2-0-and-1-3-release-candidates-available"&gt;2.0 RC1 announcement&lt;/a&gt;, the &lt;code&gt;1.3 GA&lt;/code&gt; is also available supporting the Kafka &lt;code&gt;0.11.x.x&lt;/code&gt; client with Spring Framework &lt;code&gt;4.3.x&lt;/code&gt; applications.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;They are available for download from the &lt;a href="https://repo.spring.io/release"&gt;Release Repository&lt;/a&gt; and Maven Central:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;repositories {
-    maven { url 'http://repo.spring.io/release' }
-}
-compile "org.springframework.kafka:spring-kafka:2.0.0.RELEASE"&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;That was 6 months journey to bring a Java 8 and Spring Framework 5 vision for Spring for Apache Kafka project and here is what we have so far overall:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="ulist"&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Apache Kafka &lt;code&gt;0.11.x.x&lt;/code&gt; client&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Transactions support&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Headers mapping&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Kafka Streams support&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;KafkaAdmin&lt;/code&gt; is now available to automatically add topics (for &lt;code&gt;NewTopic&lt;/code&gt; beans present in the application context)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;errorHandler&lt;/code&gt; and &lt;code&gt;groupId&lt;/code&gt; support for &lt;code&gt;@KafkaListener&lt;/code&gt;; also &lt;code&gt;Consumer&lt;/code&gt; argument resolution&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;@EmbeddedKafka&lt;/code&gt; for testing support&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Many of these features are also available in the 1.3 release.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Thanks to all community members for any feedback and contributions!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Also the minor version &lt;code&gt;spring-integration-kafka-2.3.0.RELEASE&lt;/code&gt; is available.
-This version utilize the &lt;code&gt;spring-kafka-1.3.0.RELEASE&lt;/code&gt; foundation and provide some functionality to support Apache Kafka &lt;code&gt;0.11.x.x&lt;/code&gt; client.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;See the &lt;a href="http://projects.spring.io/spring-kafka/"&gt;Project Page&lt;/a&gt; for a complete matrix of &lt;code&gt;spring-kafka&lt;/code&gt;, &lt;code&gt;spring-integration-kafka&lt;/code&gt; and &lt;code&gt;kafka-clients&lt;/code&gt; version compatibility.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-kafka/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-kafka/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-kafka/blob/master/CONTRIBUTING.adoc"&gt;Contributing&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-kafka"&gt;Help&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-kafka"&gt;Chat&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
   </entry>
 </feed>
